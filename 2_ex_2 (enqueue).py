@@ -17,7 +17,7 @@ class Queue:
             print(temp.value)
             temp = temp.next
         
-    def enqueue(self, value):
+    def enqueue(self, value): # enqueue - add element to the BACK of queue
         new_node = Node(value)
         if self.first is None:
             self.first = new_node

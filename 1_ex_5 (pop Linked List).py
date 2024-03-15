@@ -28,7 +28,7 @@ class LinkedList:
         self.length += 1
         return True
 
-    def pop(self):
+    def pop(self): # POP - izdrukā pirmo LinkedList elementu un izdzēš to ārā no Linked List
         if self.length == 0:
             return None
         temp = self.head

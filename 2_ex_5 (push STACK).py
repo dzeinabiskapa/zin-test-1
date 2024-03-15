@@ -16,7 +16,7 @@ class Stack:
             print(temp.value)
             temp = temp.next
 
-    def push(self, value):
+    def push(self, value): # INSERT an element into the stack
         new_node = Node(value)
         if self.height == 0:
             self.top = new_node
@@ -24,32 +24,18 @@ class Stack:
             new_node.next = self.top
             self.top = new_node
         self.height += 1
-        return True
+ 
 
-    def pop(self):
-        if self.height == 0:
-            return None
-        temp = self.top
-        self.top = self.top.next
-        temp.next = None
-        self.height -= 1
-        return temp
-    
 
-    
 
-my_stack = Stack(4)
-my_stack.push(3)
-my_stack.push(2)
-my_stack.push(1)
+my_stack = Stack(2)
 
-print('Stack before pop():')
+print('Stack before push(1):')
 my_stack.print_stack()
 
-print('\nPopped node:')
-print(my_stack.pop().value)
+my_stack.push(1)
 
-print('\nStack after pop():')
+print('\nStack after push(1):')
 my_stack.print_stack()
 
 
@@ -57,18 +43,11 @@ my_stack.print_stack()
 """
     EXPECTED OUTPUT:
     ----------------
-    Stack before pop():
-    1
+    Stack before push(1):
     2
-    3
-    4
 
-    Popped node:
+    Stack after push(1):
     1
-
-    Stack after pop():
-    2
-    3
-    4
+    2   
 
 """

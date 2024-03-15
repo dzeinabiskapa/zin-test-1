@@ -28,7 +28,7 @@ class Queue:
         self.length += 1
         return True
 
-    def dequeue(self):
+    def dequeue(self): # REMOVES and returns the FRONT element of the queue
         if self.length == 0:
             return None
         temp = self.first
